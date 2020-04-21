@@ -11,9 +11,10 @@
   "scripts": {
     "clean": "rimraf bin",
     "grunt": "grunt",
-    "build": "npm run clean && npm run grunt",
-    "prepublish": "npm run build"
+    "build": "yarn clean && yarn grunt",
+    "postinstall": "yarn build"
   },
+  "private": true,
   "repository": {
     "type": "git",
     "url": "git://github.com/TypeStrong/typedoc-default-themes.git"
@@ -26,9 +27,6 @@
     "node": ">= 8"
   },
   "dependencies": {
-    "lunr": "^2.3.8"
-  },
-  "devDependencies": {
     "@types/lunr": "^2.3.2",
     "grunt": "^1.0.4",
     "grunt-autoprefixer": "^3.0.4",
@@ -39,6 +37,7 @@
     "grunt-sass": "^3.1.0",
     "grunt-string-replace": "^1.0.0",
     "grunt-ts": "^6.0.0-beta.22",
+    "lunr": "^2.3.8",
     "rimraf": "^3.0.2",
     "sass": "^1.26.3",
     "typescript": "^3.8.3"
